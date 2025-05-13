@@ -1,92 +1,176 @@
-/* REFERENCIA
-    // Array de imágenes para el header
-    const headerImages = [
-    "https://images.pexels.com/photos/1606328/pexels-photo-1606328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/10178903/pexels-photo-10178903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    ];
+/* RECOMENDACIONES
+    ESTRUCTURA JS BASE
+    //  1º variables
+    //  2º clases
+    //  3º eventos X
+    //  4º funciones (variables)
+    //  5º invocación a las funciones
 
-    // Array para la galería (imagen + descripción)
-    const galeriaItems = [
-    {
-        url: "https://images.pexels.com/photos/2589456/pexels-photo-2589456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        description: "Montañas en el amanecer"
-    },
-    {
-        url: "https://images.pexels.com/photos/29708579/pexels-photo-29708579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        description: "Lago sereno entre los árboles"
-    },
-    {
-        url: "https://images.pexels.com/photos/29453681/pexels-photo-29453681/free-photo-of-sereno-sendero-forestal-otonal-bordeado-de-hojas.jpeg",
-        description: "Camino en el bosque"
-    },
-    ];
 
-    // Función para cargar imagen del header
-    function setRandomHeaderImage() {
-    const headerImg = document.getElementById("header-img");
-    const randomIndex = Math.floor(Math.random() * headerImages.length);
-    headerImg.src = headerImages[randomIndex];
-    }
+        Llamar a los elementos del DOM
 
-    // Función para generar la galería
-    function generateGallery() {
-    const container = document.getElementById("galeria");
 
-    galeriaItems.forEach(item => {
-        const card = document.createElement("div");
-        card.classList.add("card");
+        array
+            X array fotos cabecera
+            X array cards
 
-        const img = document.createElement("img");
-        img.src = item.url;
-        img.alt = item.description;
 
-        const desc = document.createElement("p");
-        desc.textContent = item.description;
+        // Primero que funcione, después refactorizar.
+        function pintarBanner
+            pintar la primera img del array:
+            arrayfotoscabecera[0]
 
-        card.appendChild(img);
-        card.appendChild(desc);
-        container.appendChild(card);
-    });
-    }
 
-    // Inicializar en carga
-    window.addEventListener("DOMContentLoaded", () => {
-    setRandomHeaderImage();
-    generateGallery();
-    });
+        function pintarCards 
+
+
+        // Invocaciones siempre al final
+        invoco pintar banner
+        invoco pintar cards
 
 */
 
 
-/*
-ÓRDEN/ ESTRUCTURA JS
-//  1º variables
-//  2º clases
-//  3º eventos
-//  4º funciones
-//  5º invocación a las funciones
 
 
-    Llamar a los elementos del DOM
+// ARRAYS ---------------------------------- ↓↓↓
+
+// Array de contenido de la cabecera
+const fotosCabecera = [
+    {
+        src_img: "../assets/img/banner/1.jpg",
+        alt: "Puesta de sol sobre mar",
+    },
+    {
+        src_img: "../assets/img/banner/2.jpg",
+        alt: "Globos Aerostáticos",
+    },
+    {
+        src_img: "../assets/img/banner/3.jpg",
+        alt: "Puesta de sol",
+    },
+    {
+        src_img: "../assets/img/banner/4.jpg",
+        alt: "Globos Aerostáticos en trigal",
+    },
+    {
+        src_img: "../assets/img/banner/5.jpg",
+        alt: "Cielo nocturno",
+    },
+    {
+        src_img: "../assets/img/banner/6.jpg",
+        alt: "Montañas nevadas",
+    },
+    {
+        src_img: "../assets/img/banner/6.jpg",
+        alt: "Puesta de sol con bandada de pájaros",
+    },
+    {
+        src_img: "../assets/img/banner/8.jpg",
+        alt: "Rama de árbol peludo",
+    }
+];
+
+// Array de contenido de las cards
+const cardViajes = [
+    {
+        title: "Viaje 1",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cum.",
+        src_img: "../assets/img/viajes/viajes-1.jpg",
+        alt: "Descripción Alt"
+    },
+    {
+        title: "Viaje 2",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cum.",
+        src_img: "../assets/img/viajes/viajes-2.jpg",
+        alt: "Descripción Alt"
+    },
+    {
+        title: "Viaje 3",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cum.",
+        src_img: "../assets/img/viajes/viajes-3.jpg",
+        alt: "Descripción Alt"
+    },
+    {
+        title: "Viaje 4",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cum.",
+        src_img: "../assets/img/viajes/viajes-4.jpg",
+        alt: "Descripción Alt"
+    },
+    {
+        title: "Viaje 5",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cum.",
+        src_img: "../assets/img/viajes/viajes-5.jpg",
+        alt: "Descripción Alt"
+    },
+    {
+        title: "Viaje 6",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cum.",
+        src_img: "../assets/img/viajes/viajes-6.jpg",
+        alt: "Descripción Alt"
+    },
+    {
+        title: "Viaje 7",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cum.",
+        src_img: "../assets/img/viajes/viajes-7.jpg",
+        alt: "Descripción Alt"
+    },
+]
 
 
-    array
-        array fotos cabecera
-        array cards
 
 
-    // Primero que funcione, después refactorizar.
-    function pintarBanner
-        pintar la primera img del array:
-        arrayfotoscabecera[0]
 
 
-    function pintarCards 
+// FUNCIÓN PARA ALEATORIZAR IMGS DEL HEADER ------ ↓↓↓
+function aleatorizarImgHeader() {
+    const headerImg = document.querySelector("#img-cabecera"); //llamada al id
+    //console.log(headerImg)
+    const randomIndex = Math.floor(Math.random() * fotosCabecera.length); //randomiza la elección de imgs
+    /*  Math: es una clase-objeto, tienen métodos y propiedades
+      .random(): método de objeto-clase math que devuelve entre 0-1
+      * multiplicará por la longitud del array .length()
+      Math.floor: redondea hacia abajo.*/
+    headerImg.setAttribute("src", fotosCabecera[randomIndex].src_img);//llamada a la parte del array que necesitamos (src)
+
+    console.log(headerImg)
+}
+
+aleatorizarImgHeader()
+//Invocar a la función --------------------------- ↑↑↑
 
 
-    // Invocaciones siempre al final
-    invoco pintar banner
-    invoco pintar cards
 
-*/
+
+
+// FUNCIÓN PARA GENERAR LAS CARDS ---------------- ↓↓↓
+function generarCards(){
+    const contenedorCards = document.querySelector(".contenedor-cards"); //llamada a contenedor-cards
+    
+    const cardGenerada = cardViajes.forEach((card) => {
+    
+        const divCard = document.createElement('div'); //crea un div para Card
+        divCard.classList.add('card'); //añade una clase en el div Card
+        
+        const imgCard = document.createElement('img'); //crea un img
+        imgCard.setAttribute('src', card.src_img) //añade atributo src
+        imgCard.setAttribute('alt', card.alt) //añade atributo alt
+
+        const h1Card = document.createElement('h1'); //crea un h1
+        const pCard = document.createElement('p'); //crea un p
+        h1Card.textContent = card.title; //añade el contenido html del texto
+        pCard.textContent = card.description; //añade el contenido html del texto
+
+        
+        divCard.append(imgCard); //agrega imgCard dentro del divCard, al final 
+        divCard.append(h1Card); //agrega h1Card dentro del divCard, al final
+        divCard.append(pCard); //agrega h1Card dentro del divCard, al final  
+        
+        contenedorCards.append(divCard); //agrega divCard dentro del contenedorCards
+    });
+    
+    return cardGenerada
+}
+   
+generarCards()
+//Invocar a la función --------------------------- ↑↑↑    

@@ -15,26 +15,39 @@ body {
 /* HEADER ------------------------------- */
 header {
     width: 100%;
-    height: 300px;
+    height: 30em;
     overflow: hidden; /*oculta lo que sobresale*/
 }
 
-header img {
+header div img{
     width: 100%;
-    height: 100%;
+    height: 30em;
     object-fit: cover; /*cubre el contenedor y mantiene su relación de aspecto*/
+}
+
+header h1{
+   padding: 1em;
+   text-align: center;
 }
 
 
 /* GALERÍA --------------------------------*/
 #galeria {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
+    gap: 1em;
+}
+
+.contenedor-cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /*  repeat: función que repite lo que hay en su interior
+    /*  https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
+        repeat: función que repite lo que hay en su interior
         auto-fit: crea tantas columnas como quepan en el contenedor;
         minmax(250px, 1fr): minmax(tamañomínimo, tamañomáximo) de cada columna*/
-    gap: 1rem;
-    padding: 2rem;
+    gap: 1em;
 }
 
 .card {
@@ -42,6 +55,7 @@ header img {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    padding-bottom: 2em;
 }
 
 .card img {
@@ -50,9 +64,9 @@ header img {
     object-fit: cover;
 }
 
-.card p {
-    padding: 1rem;
-    font-size: 0.95rem;
+.card p, .card h1 {
+    padding: 1em 2rem 0em 2rem;
 }
+
 
 /*mediaqueries*/
