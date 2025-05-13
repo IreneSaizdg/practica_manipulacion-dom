@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica: Manipulación del DOM</title>
+
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+    <!--HEADER IMG DINÁMICA ---------------------------------------->
+    <header>
+        <h1>Bienvenidos</h1>
+        <div>
+            <img id="header-img" alt="img-aleatoria" 
+            src="/assets/img/banner/1.jpg">
+        </div>
+        <!--src provisional-->
+    </header>
+
+
+    <!--SECCIÓN GALERÍA DE IMGS ------------------------------------->
+    <section id ="galeria">
+        <h2>Recomendados</h2>
+        <div id = "contenedor de cards">
+
+        <!--Tarjetas generadas dinámicamente-->
+            <!--Cards simuladas-->
+            <div class="card">
+                <img src= "/assets/img/viajes/viajes-1.jpg">
+                <p>Item description</p>
+            </div>
+            <div class="card">
+                <img src= "/assets/img/viajes/viajes-2.jpg" alt="item.description">
+                <p>Item description</p>
+            </div>
+            <div class="card">
+                <img src= "assets/img/viajes/viajes-3.jpg" alt="item.description">
+                <p>Item description</p>
+            </div>
+        
+        </div>
+
+    </section>
+
+
+    <!--SCRIPT----->
+    <script src="/js/main.js"></script>
+</body>
+</html>
